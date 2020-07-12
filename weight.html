@@ -1,0 +1,124 @@
+<!DOCTYPE: HTML>
+<html lang="en-us">
+    <head>
+                <title>Calc.js | Weight</title>
+        
+        <!-----------------Browser and mobile compatible--------------->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--------------------SEO and Descriptions------------------->
+        <meta name="description" content="# tydyedesign.github.io
+                This is for learning HTML5, CSS3, and JavaScript; to demonstrate personal skill in JavaScript and provide easy ways to calculate.
+                Brigham Young University-Idaho, BYU-Idaho, CIT230, CIT 230, CIT160">
+        <meta name="keywords" content="BYUI, CIT230, CIT, frontend web development, tyler tucker, tydye design, javascript calculator, github, unit converter, unit calculator">
+        <meta name="author" content="Tyler Tucker, TyDyeDesign">
+        
+        <!---------------------Mobile App Tags----------------------->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <link rel="apple-touch-startup-image" href="calculatoricon.png" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="calculatoricon.png">
+        <link rel="apple-touch-icon" href="calculatoricon.png" />
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!---------------Stylesheets, CDNs, Script Tags--------------->
+        
+        <link rel="stylesheet" href="main.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="pagecontainer">
+            <div class="card-8" id="weightmain">
+    <header id="weightmain">
+        <div id="backbtn">
+            <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
+        </div>
+        <div id="homebtn">
+            <a href="index.html"><button class="w3-button w3-black">Home</button></a>
+        </div>
+                
+        <div id="weighttitle">
+        <h1>Weight <i class="fa fa-balance-scale"></i></h1>
+        </div>
+            <hr>
+    </header>
+                
+        <main ng-app="poundstokgApp" ng-controller="myCtrl">
+                
+            <div id="conversionbox" class="w3-container w3-blue">
+            
+                <h3><u>Pounds to Kilograms</u></h3>
+                <span class="highlight">{{ equation }}</span>
+                <br>
+
+                <br>
+                
+                Pounds: <input type="text" ng-model="pounds"><br><br>
+                Pounds to Kg: <h3>{{pounds * 0.453592 | number:2}}</h3>
+                
+                <hr>
+                
+                <h3><u>Kilograms to Pounds</u></h3>
+                <span class="highlight">{{ equation2 }}</span><br><br>
+                Kilograms: <input type="text" ng-model="kilograms"><br><br>
+                Kg to Pounds: <h3>{{kilograms * 2.20462 | number:2}}</h3>
+                
+            </div>
+                
+            <div id="conversionbox" class="w3-container w3-blue">
+            
+                <h3><u>Ounces to Grams</u></h3>
+                <span class="highlight">{{ ounceequation }}</span>
+                <br>
+
+                <br>
+                
+                Ounces: <input type="text" ng-model="ounces"><br>
+            
+                <br>
+                Ounces to Grams: <h3>{{ounces * 28.3495 | number:2}}</h3>
+                <hr>
+                
+                <h3><u>Grams to Ounces</u></h3>
+                <span class="highlight">{{ gramequation }}</span>
+<br>
+<br>
+                Grams: <input type="text" ng-model="grams"><br><br>
+                Grams to Ounces: <h3>{{grams * 0.035274 | number:2}}</h3>
+                
+            </div>
+        </main>
+
+            </div>
+        </div>
+    </body>
+
+<script>
+var app = angular.module('poundstokgApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.pounds= "";
+    $scope.kilograms= "";
+    $scope.equation= "1 lb = 0.453592 kg";
+    $scope.equation2= "1 kg = 2.20462 lb";
+    
+    $scope.ounces= "";
+    $scope.grams= "";
+    $scope.ounceequation= "1 oz = 28.3495 grams";
+    $scope.gramequation= "1 gram = 0.035274 oz";
+});
+</script>
+
+</html>

@@ -1,2 +1,2 @@
-# jsunitcalc
-JS unit calculator clone to make single-page
+# jsunitcalc.github.io
+Unit calculator made in JavaScript

@@ -1,0 +1,130 @@
+<script>
+/*-----------------Temperature Converter---------------*/
+
+/* Input: a temperature in Fahrenheit
+ * Processing: convert the temperature from Fahrenheit to Celsius
+ * Output: the temperature converted to Celsius
+ */
+function fahrToCels() {
+    // Read a Fahrenheit temperature from the user.
+    var text = document.getElementById('fahrenInputBox').value;
+
+    // Convert what the user typed from text into a number.
+    var f = parseFloat(text);
+
+    // Convert the Fahrenheit temperature into Celsius.
+    var c = 5 / 9 * (f - 32);
+
+    // Display the Celsius temperature to the user.
+    document.getElementById('celsiusDiv').innerHTML = c;
+}
+
+
+/* Input: a temperature in Celsius
+ * Processing: convert the temperature from Celsius to Fahrenheit
+ * Output: the temperature converted to Fahrenheit
+ */
+function celsToFahr() {
+    // Read a Fahrenheit temperature from the user.
+    var text = document.getElementById('celsiusInputBox').value;
+
+    // Convert what the user typed from text into a number.
+    var c = parseFloat(text);
+
+    // Convert the Fahrenheit temperature into Celsius.
+    var f = c * 1.8 + 32;
+
+    // Display the Celsius temperature to the user.
+    document.getElementById('fahrDiv').innerHTML = f;
+}
+
+/* Input: a temperature in Fahrenheit
+ * Processing: convert the temperature from Fahrenheit to Celsius
+ * Output: the temperature converted to Celsius
+ */
+function fahrToKelv() {
+    // Read a Fahrenheit temperature from the user.
+    var text = document.getElementById('fahrInputBox').value;
+
+    // Convert what the user typed from text into a number.
+    var f = parseFloat(text);
+
+    // Convert the Fahrenheit temperature into Celsius.
+    var k = ((5/9) * (f - 32)) + 273;
+
+    // Display the Celsius temperature to the user.
+    document.getElementById('kelvinDiv').innerHTML = k;
+}
+
+/* Input: a temperature in Fahrenheit
+ * Processing: convert the temperature from Fahrenheit to Celsius
+ * Output: the temperature converted to Celsius
+ */
+function celsToKelv() {
+    // Read a Fahrenheit temperature from the user.
+    var text = document.getElementById('celsInputBox').value;
+
+    // Convert what the user typed from text into a number.
+    var c = parseFloat(text);
+
+    // Convert the Fahrenheit temperature into Celsius.
+    var k = c + 273.15;
+
+    // Display the Celsius temperature to the user.
+    document.getElementById('kelvinDiv2').innerHTML = k;
+}
+</script>
+
+<h1>Temperature <i class="fa fa-thermometer"></i></h1>
+            <hr>
+    </header>
+            <div id="conversionbox" class="w3-container w3-">
+                <p>
+                <h2>Fahrenheit to Celsius</h2>
+                <span class="highlight"> Celsius = (5 / 9) * (farenheit - 32) </span>
+<br>
+<br>
+Enter a temperature in Fahrenheit: <input type="text" id="fahrenInputBox">
+<button type="button" class="w3-button w3-grey" onclick="fahrToCels()">Convert</button>
+<div id="celsiusDiv"></div>
+                </p>
+            </div>
+   
+            <div id="conversionbox">
+                <p>
+                <h2>Celsius to Fahrenheit</h2>
+                <span class="highlight"> Fahrenheit = (Celsius * 1.8) + 32 </span>
+<br>
+<br>
+Enter a temperature in Celsius: <input type="text" id="celsiusInputBox">
+<button type="button" class="w3-button w3-grey" onclick="celsToFahr()">Convert</button>
+<div id="fahrDiv"></div>
+                </p>
+            </div>
+                    
+            <div id="conversionbox">
+                <p>
+                <h2>Fahrenheit to Kelvin</h2>
+                <span class="highlight"> Kelvin = ((5/9) * (Fahrenheit - 32)) + 273 </span>
+<br>
+<br>
+Enter a temperature in Fahrenheit: <input type="text" id="fahrInputBox">
+<button type="button" class="w3-button w3-grey" onclick="fahrToKelv()">Convert</button>
+<div id="kelvinDiv"></div>
+                 </p>
+            </div>
+        
+            <div id="conversionbox">
+                <p>
+                <h2>Celsius to Kelvin</h2>
+                <span class="highlight"> Kelvin = Celsius + 273.15 </span>
+<br>
+<br>
+Enter a temperature in Celsius: <input type="text" id="celsInputBox">
+<button type="button" class="w3-button w3-grey" onclick="celsToKelv()">Convert</button>
+<div id="kelvinDiv2"></div>
+                 </p>
+            </div>
+
+            </div>
+        </div>

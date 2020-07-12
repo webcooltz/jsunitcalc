@@ -1,0 +1,138 @@
+<!DOCTYPE = HTML>
+<html>
+    <head>
+                <title>Calc.js | Distance</title>
+        
+        <!-----------------Browser and mobile compatible--------------->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--------------------SEO and Descriptions------------------->
+        <meta name="description" content="# tydyedesign.github.io
+                This is for learning HTML5, CSS3, and JavaScript; to demonstrate personal skill in JavaScript and provide easy ways to calculate.
+                Brigham Young University-Idaho, BYU-Idaho, CIT230, CIT 230, CIT160">
+        <meta name="keywords" content="BYUI, CIT230, CIT, frontend web development, tyler tucker, tydye design, javascript calculator, github, unit converter, unit calculator">
+        <meta name="author" content="Tyler Tucker, TyDyeDesign">
+        
+        <!---------------------Mobile App Tags----------------------->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <link rel="apple-touch-startup-image" href="calculatoricon.png" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="calculatoricon.png">
+        <link rel="apple-touch-icon" href="calculatoricon.png" />
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!---------------Stylesheets, CDNs, Script Tags--------------->
+        
+        <link rel="stylesheet" href="main.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="pagecontainer">
+            <div class="card-8">
+    <header>
+        <p id="backbtn">
+            <a href="unitpick.html"><button class="w3-button w3-black">Back</button></a>
+        </p>
+               
+                <h1>Distance <i class="fa fa-road" aria-hidden="true"></i></h1>
+            <hr>
+    </header>
+        <main ng-app="distanceApp" ng-controller="myCtrl">
+       
+            <div id="conversionbox" class="w3-container w3-green">
+            
+                <h3><u>Inches to Centimeters</u></h3>
+                <span class="highlight">{{ equation }}</span>
+                <br>
+
+                <br>
+                
+                Inches: <input type="text" ng-model="inches"><br><br>
+                Inches to Cm: <h3>{{inches * 2.54 | number:2}}</h3>
+                
+                <hr>
+                
+                <h3><u>Centimeters to Inches</u></h3>
+                <span class="highlight">{{ equation2 }}</span><br><br>
+                Centimeters: <input type="text" ng-model="centimeters"><br><br>
+                Cm to Inches: <h3>{{centimeters * 0.393701 | number:2}}</h3>
+                
+            </div>
+                
+            <div id="conversionbox" class="w3-container w3-green">
+            
+                <h3><u>Feet to Meters</u></h3>
+                <span class="highlight">{{ metersequation }}</span>
+                <br><br>
+                Feet: <input type="text" ng-model="feet"><br>
+                <br>
+                Feet to Meters: <h3>{{feet * 0.3048 | number:2}}</h3>
+                <hr>
+                
+                <h3><u>Meters to Feet</u></h3>
+                <span class="highlight">{{ feetequation }}</span>
+<br>
+<br>
+                Meters: <input type="text" ng-model="meters"><br><br>
+                Meters to Feet: <h3>{{meters * 3.28084 | number:2}}</h3>
+                
+            </div>
+            
+            <div id="conversionbox" class="w3-container w3-green">
+            
+                <h3><u>Miles to Km</u></h3>
+                <span class="highlight">{{ kmToMiles }}</span>
+                <br><br>
+                Miles: <input type="text" ng-model="miles"><br>
+                <br>
+                Miles to Km: <h3>{{miles * 1.60934 | number:2}}</h3>
+                <hr>
+                
+                <h3><u>Km to Miles</u></h3>
+                <span class="highlight">{{ milesToKm }}</span>
+<br>
+<br>
+                Kilometers: <input type="text" ng-model="km"><br><br>
+                Km to Miles: <h3>{{km * 0.621371 | number:2}}</h3>
+                
+            </div>
+        </main>
+        <footer>
+        </footer>
+            </div>
+        </div>
+
+<script>
+var app = angular.module('distanceApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.inches= "";
+    $scope.centimeters= "";
+    $scope.equation= "Cm = In * 2.54";
+    $scope.equation2= "In = Cm * 0.393701";
+    
+    $scope.feet= "";
+    $scope.meters= "";
+    $scope.feetequation= "Ft = Meters * 0.3048";
+    $scope.metersequation= "Meters = Ft * 3.28084";
+    
+    $scope.km= "";
+    $scope.miles= "";
+    $scope.kmToMiles= "Km = Miles * 0.621371";
+    $scope.milesToKm= "Miles = Km * 1.60934";
+});
+</script>
+    </body>
+</html>
