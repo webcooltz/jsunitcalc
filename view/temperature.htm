@@ -1,0 +1,19 @@
+<div id="conversionbox" class="w3-container w3-red">
+            
+                <h3><u>Farenheit to Celsius</u></h3>
+                <span class="highlight">{{ equation }}</span>
+                <br>
+
+                <br>
+                
+                Farenheit Temperature: <input type="text" ng-model="farenheit"><br><br>
+                Temperature in Celsius: <h3>{{(farenheit - 32) * (5/9) | number:2}}</h3>
+                
+                <hr>
+                
+                <h3><u>Celsius to Farenheit</u></h3>
+                <span class="highlight">{{ equation2 }}</span><br><br>
+                Celsius Temperature <input type="text" ng-model="celsius"><br><br>
+                Temperature in Farenheit: <h3>{{(celsius * 1.8) + 32 | number:2}}</h3>
+                
+            </div>

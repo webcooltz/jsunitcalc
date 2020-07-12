@@ -26,31 +26,33 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">-->
         <link href="style/emoji.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.0/angular-route.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     </head>
-    <body ng-app="testApp">
+    <body>
         <div class="pagecontainer">
             <div class="card-8">
         <header>
             <div id="headerid"></div>
         </header>
-    <main>
+    <main ng-app="testApp">
             <div id="conversionbox">
-                    Welcome to 2.0! Finally on the way.
+                    Welcome to 2.0! Finally here.
                 <br><br>
                 
-                <p><a href="#/!">Main</a></p>
+                <p><a href="#/!">Home</a></p>
 
-<a href="#!first">first</a>
-<a href="#!second">second</a>
-<a href="#!third">third</a>
+                <a href="#!temperature"><button class="w3-button w3-red"><h3>Temperature<br><i class="fa fa-thermometer"></i></h3></button></a>
+                <a href="#!weight"><button class="w3-button w3-blue"><h3>Weight<br><i class="fa fa-balance-scale" aria-hidden="true"></i></h3></button></a>
+                <a href="#!distance"><button class="w3-button w3-green"><h3>Distance<br><i class="fa fa-road" aria-hidden="true"></i></h3></button></a>
 
-                    <div ng-view></div>
+                <div ng-view></div>
+                
             </div>
-        <a href="unitpick.html"><button class="w3-button w3-black"><h3>Start <i class="em em-arrow_right"></i></h3></button></a>
+<!--        <a href="unitpick.html"><button class="w3-button w3-black"><h3>Start <i class="em em-arrow_right"></i></h3></button></a>-->
     </main>
         <footer>
             <div id="footerid"></div>

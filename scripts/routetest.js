@@ -4,13 +4,13 @@ app.config(function($routeProvider) {
   .when("/", {
     templateUrl : "view/main.htm"
   })
-  .when("/first", {
-    templateUrl : "view/first.htm"
+  .when("/temperature", {
+    templateUrl : "view/temperature.htm"
   })
-  .when("/second", {
-    templateUrl : "view/second.htm"
+  .when("/weight", {
+    templateUrl : "view/weight.htm"
   })
-  .when("/third", {
-    templateUrl : "view/third.htm"
+  .when("/distance", {
+    templateUrl : "view/distance.htm"
   });
 });
