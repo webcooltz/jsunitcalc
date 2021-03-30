@@ -10,6 +10,9 @@ app.config(function($routeProvider) {
   .when("/weight", {
     templateUrl : "view/weight.htm"
   })
+  .when("/money", {
+    templateUrl : "view/money.htm"
+  })
   .when("/distance", {
     templateUrl : "view/distance.htm"
   });

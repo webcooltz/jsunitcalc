@@ -1,3 +1,3 @@
 $(function(){
-        $('#footerid').load( '/common/footer.html' );
+        $('#footer-id').load( '/common/footer.html' );
     });
