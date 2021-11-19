@@ -1,3 +1,3 @@
 $(function(){
-        $('#footer-id').load( '/common/footer.html' );
+        $('#footer-id').load( '/jsunitcalc/common/footer.html' );
     });

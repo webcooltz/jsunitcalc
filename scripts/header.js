@@ -1,3 +1,3 @@
 $(function(){
-        $('#header-id').load( '/common/header.html' );
+        $('#header-id').load( '/jsunitcalc/common/header.html' );
     });
